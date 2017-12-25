@@ -3,22 +3,42 @@
 <head>
 <meta http-equiv="CONTENT-TYPE" content="text/html; charset=windows-1251">
 <title>lab </title>
+<script>
+    img = new Array()
+	img[0]=new Image()
+	img[1]=new Image()
+	img[2]=new Image()
+	img[3]=new Image()
+	img[4]=new Image()
+	img[9]=new Image()
+	img[0].src="ab.png"
+	img[1].src="ac.png"
+	img[2].src="ad.png"
+	img[3].src="ae.png"
+	img[4].src="dow.png"
+	function swapa (n)
+	{
+		img[9].src=img[n].src;
+		return img[4].src;
+	}
+	
+	function swapb (n)
+	{
+		return img[9].src;
+	}	
+</script>
 </head>
-<style>
-
-
-</style>
 <body bgcolor="#F5F5F5">
 <table align="Center" >
 	<tr height="300px">
-	<td width="33%"><img src='ab.png' >	</td>
-	<td width="33%"><img src='ac.png' >	</td>
-	<td width="33%"><img src='ad.png' >	</td>
+	<td width="33%"><img src='ab.png' id="img" onMouseOver="document.getElementById('img').src=swapa(0)"onMouseOut="document.getElementById('img').src=swapb(0)"></td>
+	<td width="33%"><img src='ac.png' id="img1" onMouseOver="document.getElementById('img1').src=swapa(1)"onMouseOut="document.getElementById('img1').src=swapb(1)"></td>
+	<td width="33%"><img src='ad.png' id="img2" onMouseOver="document.getElementById('img2').src=swapa(2)"onMouseOut="document.getElementById('img2').src=swapb(2)"></td>
 	</tr>
 	<tr height="300px">
-	<td width="33%"><img src='ae.png' >	</td>
-	<td width="33%"><img src='ab.png' >	</td>
-	<td width="33%"><img src='ab.png' >	</td>
+	<td width="33%"><img src='ae.png' id="img3" onMouseOver="document.getElementById('img3').src=swapa(3)"onMouseOut="document.getElementById('img3').src=swapb(3)"></td>
+	<td width="33%"><img src='ab.png' id="img4" onMouseOver="document.getElementById('img4').src=swapa(0)"onMouseOut="document.getElementById('img4').src=swapb(0)"></td>
+	<td width="33%"><img src='ab.png' id="img5" onMouseOver="document.getElementById('img5').src=swapa(0)"onMouseOut="document.getElementById('img5').src=swapb(0)"></td>
 	</tr>
 </table>
 
